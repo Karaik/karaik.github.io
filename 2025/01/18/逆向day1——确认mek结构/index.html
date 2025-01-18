@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 7.3.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -17,20 +17,29 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>分类：github - 这位同学的博er</title>
+  <title>逆向day1——确认mek结构 - 这位同学的博er</title>
 
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="这位同学的博er">
-<meta property="og:url" content="http://karaik.github.io/categories/%E5%8D%9A%E5%AE%A2/github/index.html">
+    <meta name="description" content="为bsdx反序列化.mek文件做二进制文件读取分析，方便后续GUI内编辑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="逆向day1——确认mek结构">
+<meta property="og:url" content="http://karaik.github.io/2025/01/18/%E9%80%86%E5%90%91day1%E2%80%94%E2%80%94%E7%A1%AE%E8%AE%A4mek%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="这位同学的博er">
+<meta property="og:description" content="为bsdx反序列化.mek文件做二进制文件读取分析，方便后续GUI内编辑">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-01-18T11:29:25.197Z">
+<meta property="article:modified_time" content="2025-01-18T11:29:05.634Z">
 <meta property="article:author" content="这位同学（karaik）">
+<meta property="article:tag" content="逆向工程">
+<meta property="article:tag" content="二进制编辑">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="开发">
+<meta property="article:tag" content="mod">
 <meta name="twitter:card" content="summary">
   
   
   
-  
+  <meta name="keywords" content="逆向工程,二进制编辑,java,开发,mod">
 
   <!-- feed -->
   
@@ -45,7 +54,7 @@
 </head>
 <body>
 
-<div class="l_body s:aa index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">这位同学的博er</div></a></div></header>
@@ -57,28 +66,99 @@
 <nav class="menu dis-select"></nav>
 </div>
 <div class="widgets">
+
+
 <widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2025/01/18/%E9%80%86%E5%90%91day1%E2%80%94%E2%80%94%E7%A1%AE%E8%AE%A4mek%E7%BB%93%E6%9E%84/"><span class="title">逆向day1——确认mek结构</span></a><a class="item title" href="/2025/01/05/vue%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"><span class="title">创建electron+vue项目</span></a><a class="item title" href="/2024/12/27/example/"><span class="title">博客测试</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">这位同学的博er</div></a></div></header>
-
- 
 
 
 
 
-<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a class="active" href="/categories">分类：github</a><a href="/tags">标签</a><a href="/archives">归档</a></nav></div>
-<div class="post-list post"><a class="post-card post" href="/2024/12/27/example/">
-<article class="md-text"><h2 class="post-title">博客测试</h2><div class="excerpt"><p>一个简单的博客案例</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-12-27T13:26:03.060Z">2024-12-27</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>博客</span></span></div></article>
-</a></div>
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/">开发日常</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/">逆向工程</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/mod/">mod</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-01-18T11:29:25.197Z">2025-01-18</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-01-18T11:29:05.634Z">2025-01-18</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>逆向day1——确认mek结构</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>第一天正式开始逆向，已经确定大体结构，记录下逆向反序列化 <code>.mek</code> 文件的思路。</p>
+<hr>
+<h1 id="1-确定大块"><a href="#1-确定大块" class="headerlink" title="1.确定大块"></a>1.确定大块</h1><h2 id="A-mek文件"><a href="#A-mek文件" class="headerlink" title="A.mek文件"></a>A.mek文件</h2><p>在bsdx中的 <code>.mek</code> 文件的它们大概率用的是<strong>同一套解析逻辑</strong>，意味着可以将其规律整合抽象为类，统一反序列化。</p>
+<p>其中根据群友二进制编辑后整合的结论来看，不难得出以下对于<strong>大块</strong>规律的结论。</p>
+<h3 id="①区块大小块"><a href="#①区块大小块" class="headerlink" title="①区块大小块"></a>①区块大小块</h3><p>第一个块固定为24字节，因为是32位游戏程序，所以读取方式为小端序有符号整型，以 <code>Aki.mek</code> 为例，以下为第一块的hex形式字符</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">00000000  18 00 00 00 7F 01 00 00 EF 01 00 00 EB 0B 00 00</span><br><span class="line">00000010  B2 28 00 00 D3 2A 00 00</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>数值分别为 <code>24 383 495 3051 10418 10963</code> </p>
+<p>将其简单分别称为 <code>序列1 序列2 序列3 序列4 序列5 序列6</code> </p>
+<p>先说结论，</p>
+<ul>
+<li>序列1为从<strong>起始位置</strong>读起的<strong>区块大小块</strong>总字节</li>
+<li>序列2为从<strong>起始位置</strong>读起的<strong>区块大小块+机体信息</strong>总字节</li>
+<li>序列3为从<strong>起始位置</strong>读起的<strong>区块大小块+机体信息+未知信息1</strong>总字节</li>
+<li>序列4为从<strong>起始位置</strong>读起的<strong>区块大小块+机体信息+未知信息1+武装信息</strong>总字节</li>
+<li>序列5为从<strong>起始位置</strong>读起的**区块大小块+机体信息+未知信息1+武装信息+AI信息1(?)**总字节</li>
+<li>序列6为从<strong>起始位置</strong>读起的**区块大小块+机体信息+未知信息1+武装信息+AI信息1(?)+AI信息2(?)**总字节</li>
+</ul>
+<p>所以不难看出，每块的字节数，也就是长度，可由序列递减得出。</p>
+</blockquote>
+<h3 id="②机体信息块"><a href="#②机体信息块" class="headerlink" title="②机体信息块"></a>②机体信息块</h3><p><code>序列2-序列1=359</code>，则为该块大小，取对应的字节序列如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">00000010                          83 56 83 8B 83 74 83 40</span><br><span class="line">00000020  00 53 49 4C 50 48 41 00 90 BC 96 EC 20 88 9F 8B</span><br><span class="line">00000030  47 00 41 4B 49 20 4E 49 53 48 49 4E 4F 00 88 9F</span><br><span class="line">00000040  8B 47 82 AA 8B 43 82 DC 82 AE 82 EA 82 C5 82 63</span><br><span class="line">00000050  82 6B 82 B5 82 BD 83 56 83 85 83 7E 83 4E 83 89</span><br><span class="line">00000060  83 80 81 42 82 E2 82 CD 82 E8 8E A9 8E D0 82 CC</span><br><span class="line">00000070  90 BB 95 69 82 AA 8D 44 82 DD 81 42 83 8A 83 41</span><br><span class="line">00000080  83 8B 82 E6 82 E8 89 BC 91 7A 82 C6 82 CC 91 8A</span><br><span class="line">00000090  90 AB 82 AA 97 C7 82 A2 88 9F 8B 47 82 CD 88 D3</span><br><span class="line">000000A0  8A 4F 82 C6 8F E6 82 E8 82 B1 82 C8 82 B9 82 C4</span><br><span class="line">000000B0  82 A2 82 E9 82 E6 82 A4 82 C5 82 B7 81 42 90 AB</span><br><span class="line">000000C0  94 5C 93 49 82 C9 82 CD 83 56 83 8B 83 74 83 40</span><br><span class="line">000000D0  82 C6 82 D9 82 C6 82 F1 82 C7 95 CF 82 ED 82 E7</span><br><span class="line">000000E0  82 C8 82 A2 82 C5 82 B7 82 AA 91 E5 97 CA 82 C9</span><br><span class="line">000000F0  83 7A 81 5B 83 7E 83 93 83 4F 83 8C 81 5B 83 55</span><br><span class="line">00000100  81 5B 82 F0 95 FA 82 C2 83 74 83 48 81 5B 83 58</span><br><span class="line">00000110  83 4E 83 89 83 62 83 56 83 85 82 AA 8E 67 82 A6</span><br><span class="line">00000120  82 DC 82 B7 81 42 00 10 00 00 00 26 00 00 00 0E</span><br><span class="line">00000130  00 00 00 1E 00 00 00 41 00 00 00 64 00 00 00 00</span><br><span class="line">00000140  00 00 00 06 00 00 00 00 00 00 00 04 00 00 00 00</span><br><span class="line">00000150  00 00 00 C8 00 00 00 02 00 00 00 04 00 00 00 03</span><br><span class="line">00000160  00 00 00 03 00 00 00 00 00 00 00 02 00 00 00 05</span><br><span class="line">00000170  00 00 00 09 00 00 00 09 00 00 00 00 00 00 00 </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>遗憾的是本人还未发现具体规律以及数值的意义，但可以确定的是，数据是以<strong>文本信息(Shift-JIS)+数据信息</strong>的顺序排列。</p>
+</blockquote>
+<h3 id="③未知信息1"><a href="#③未知信息1" class="headerlink" title="③未知信息1"></a>③未知信息1</h3><p><code>序列3-序列2=112</code>，则为该块大小，取对应的字节序列如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">00000170                                               FF</span><br><span class="line">00000180  FF FF FF 00 00 00 00 FF FF FF FF 01 00 00 00 FF</span><br><span class="line">00000190  FF FF FF 01 00 00 00 FF FF FF FF FF FF FF FF FF</span><br><span class="line">000001A0  FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF</span><br><span class="line">000001B0  FF FF FF 02 00 00 00 FF FF FF FF 03 00 00 00 FF</span><br><span class="line">000001C0  FF FF FF 04 00 00 00 FF FF FF FF 05 00 00 00 FF</span><br><span class="line">000001D0  FF FF FF 06 00 00 00 FF FF FF FF 07 00 00 00 FF</span><br><span class="line">000001E0  FF FF FF 08 00 00 00 FF FF FF FF 09 00 00 00 </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>所以这里面到底是啥呢?</p>
+</blockquote>
+<h3 id="④武装信息"><a href="#④武装信息" class="headerlink" title="④武装信息"></a>④武装信息</h3><p><code>序列4-序列3=2556</code>，则为该块大小，取对应的字节序列如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">000001E0                                               0B</span><br><span class="line">000001F0  00 00 00 01 00 00 00 83 6F 83 8C 83 8B 83 58 83</span><br><span class="line">00000200  5E 83 93 83 76 00 30 30 30 31 00 8F 65 8F B0 82</span><br><span class="line">00000210  C5 89 A3 82 E8 82 C2 82 AF 82 C4 8D 55 8C 82 82</span><br><span class="line">00000220  B5 82 DC 82 B7 81 42 83 7B 83 5E 83 93 82 F0 89</span><br><span class="line">00000230  9F 82 B5 82 C1 82 CF 82 C8 82 B5 82 C9 82 B7 82</span><br><span class="line">00000240  E9 8E 96 82 C5 8D C5 91 E5 82 52 89 F1 89 A3 82</span><br><span class="line">00000250  E9 8E 96 82 AA 82 C5 82 AB 82 DC 82 B7 81 42 00</span><br><span class="line">00000260  FF FF FF FF 0A 00 00 00 00 00 00 00 0A 00 00 00</span><br><span class="line">00000270  00 00 00 00 00 00 00 00 3C 00 00 00 00 00 00 00</span><br><span class="line">00000280  00 00 00 00 00 00 00 00 0A 00 00 00 00 00 00 00</span><br><span class="line">00000290  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</span><br><span class="line">000002A0  00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00</span><br><span class="line">。。。。</span><br><span class="line">00000BA0  FF FF FF 14 00 00 00 00 00 00 00 01 00 00 00 00</span><br><span class="line">00000BB0  00 00 00 00 00 00 00 32 00 00 00 02 00 00 00 00</span><br><span class="line">00000BC0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</span><br><span class="line">00000BD0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</span><br><span class="line">00000BE0  00 00 00 00 00 00 00 01 00 00 00 </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>开头的第一个int值为武装的总数量，比如这里aki，写着有11个。但是进游戏一看，只有10个武装啊！原因是……还是下次再写吧。然后剩下的便是武装列表的各种武装，其具体数值对应的意义后续再研究。</p>
+</blockquote>
+<h3 id="⑤AI信息1"><a href="#⑤AI信息1" class="headerlink" title="⑤AI信息1(?)"></a>⑤AI信息1(?)</h3><h3 id="⑥AI信息2"><a href="#⑥AI信息2" class="headerlink" title="⑥AI信息2(?)"></a>⑥AI信息2(?)</h3><p>两者大概率为同样的ai信息，并不打算逆向此部分，因此放弃研究，值得注意的是这两个块的头部分别有一个或两个数值，代表着什么呢？</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/01/05/vue%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">创建electron+vue项目</a></div></section></div>
+
+
+
+
 
 
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">这位同学（karaik）</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%A1%AE%E5%AE%9A%E5%A4%A7%E5%9D%97"><span class="toc-text">1.确定大块</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-mek%E6%96%87%E4%BB%B6"><span class="toc-text">A.mek文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A0%E5%8C%BA%E5%9D%97%E5%A4%A7%E5%B0%8F%E5%9D%97"><span class="toc-text">①区块大小块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A1%E6%9C%BA%E4%BD%93%E4%BF%A1%E6%81%AF%E5%9D%97"><span class="toc-text">②机体信息块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A2%E6%9C%AA%E7%9F%A5%E4%BF%A1%E6%81%AF1"><span class="toc-text">③未知信息1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A3%E6%AD%A6%E8%A3%85%E4%BF%A1%E6%81%AF"><span class="toc-text">④武装信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A4AI%E4%BF%A1%E6%81%AF1"><span class="toc-text">⑤AI信息1(?)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A5AI%E4%BF%A1%E6%81%AF2"><span class="toc-text">⑥AI信息2(?)</span></a></li></ol></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
