@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 7.3.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -17,20 +17,28 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>归档 - 这位同学的博er</title>
+  <title>QQ机器人--1环境准备 - 这位同学的博er</title>
 
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="http://karaik.github.io/archives/index.html">
+    <meta name="description" content="使用 Napcat + Koishi 的组合，创建一个 QQ 机器人">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QQ机器人--1环境准备">
+<meta property="og:url" content="http://karaik.github.io/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/index.html">
 <meta property="og:site_name" content="这位同学的博er">
+<meta property="og:description" content="使用 Napcat + Koishi 的组合，创建一个 QQ 机器人">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-12-04T04:14:55.000Z">
+<meta property="article:modified_time" content="2025-12-04T04:14:55.000Z">
 <meta property="article:author" content="这位同学（karaik）">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="QQ机器人">
+<meta property="article:tag" content="napcat">
+<meta property="article:tag" content="koishi">
 <meta name="twitter:card" content="summary">
   
   
   
-  
+  <meta name="keywords" content="Linux,QQ机器人,napcat,koishi">
 
   <!-- feed -->
   
@@ -47,7 +55,7 @@
 </head>
 <body>
 
-<div class="l_body s:aa index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/head.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">这位同学的博er</div></a></div></header>
@@ -59,17 +67,92 @@
 <nav class="menu dis-select"></nav>
 </div>
 <div class="widgets">
+
+
 <widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/"><span class="title">QQ机器人--1环境准备</span></a><a class="item title" href="/2025/11/04/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8--2%E8%B0%B7%E6%AD%8C%E8%AE%A4%E8%AF%81/"><span class="title">从零开始搭建服务器--2谷歌认证</span></a><a class="item title" href="/2025/11/04/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8--1%E5%AE%89%E8%A3%85%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83/"><span class="title">从零开始搭建服务器--1安装各种环境</span></a><a class="item title" href="/2025/09/03/bsdx%E9%80%86%E5%90%91--2mek%E7%9A%84%E6%9C%BA%E4%BD%93%E4%BF%A1%E6%81%AF/"><span class="title">bsdx逆向--2mek的机体信息</span></a><a class="item title" href="/2025/09/03/%E5%85%B3%E4%BA%8E%E5%8F%91%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81/"><span class="title">关于发博客的工作流</span></a><a class="item title" href="/2025/01/18/bsdx%E9%80%86%E5%90%91--1%E7%A1%AE%E8%AE%A4mek%E7%BB%93%E6%9E%84/"><span class="title">bsdx逆向--1确认mek结构</span></a><a class="item title" href="/2025/01/05/vue%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"><span class="title">创建electron+vue项目</span></a><a class="item title" href="/2024/12/27/example/"><span class="title">博客测试</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/head.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">这位同学的博er</div></a></div></header>
-
- 
 
 
-<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a href="/categories">分类</a><a href="/tags">标签</a><a class="active" href="/archives">归档</a></nav></div><div class="post-list archives"><article class="" id="archive"><div class='archive-header h4'>2025</div><div class="archive-list"><a class='post fs14' href="/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/"><time>12-04</time><span>QQ机器人--1环境准备</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/11/04/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8--2%E8%B0%B7%E6%AD%8C%E8%AE%A4%E8%AF%81/"><time>11-04</time><span>从零开始搭建服务器--2谷歌认证</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/11/04/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8--1%E5%AE%89%E8%A3%85%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83/"><time>11-04</time><span>从零开始搭建服务器--1安装各种环境</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/09/03/bsdx%E9%80%86%E5%90%91--2mek%E7%9A%84%E6%9C%BA%E4%BD%93%E4%BF%A1%E6%81%AF/"><time>09-03</time><span>bsdx逆向--2mek的机体信息</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/09/03/%E5%85%B3%E4%BA%8E%E5%8F%91%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81/"><time>09-03</time><span>关于发博客的工作流</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/01/18/bsdx%E9%80%86%E5%90%91--1%E7%A1%AE%E8%AE%A4mek%E7%BB%93%E6%9E%84/"><time>01-18</time><span>bsdx逆向--1确认mek结构</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/01/05/vue%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"><time>01-05</time><span>创建electron+vue项目</span></a></div></article><article class="" id="archive"><div class='archive-header h4'>2024</div><div class="archive-list"><a class='post fs14' href="/2024/12/27/example/"><time>12-27</time><span>博客测试</span></a></div></article></div>
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/">开发日常</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-12-04T04:14:55.000Z">2025-12-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-12-04T04:14:55.000Z">2025-12-04</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>QQ机器人--1环境准备</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>使用 Napcat + Koishi 的组合创建一个QQ机器人的大致流程如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">+--------------------------------+</span><br><span class="line">|         NTQQ 登录 QQ            |</span><br><span class="line">+--------------------------------+</span><br><span class="line">                ↓</span><br><span class="line">+--------------------------------+</span><br><span class="line">|   Napcat 挂在 QQ 上对外暴露接口  |</span><br><span class="line">+--------------------------------+</span><br><span class="line">               ↓</span><br><span class="line">+--------------------------------+</span><br><span class="line">|          Koishi 启动            |</span><br><span class="line">+--------------------------------+</span><br><span class="line">               ↓</span><br><span class="line">+--------------------------------+</span><br><span class="line">|   Koishi 通过适配器连接 Napcat   |</span><br><span class="line">+--------------------------------+</span><br><span class="line">               ↓</span><br><span class="line">+--------------------------------+</span><br><span class="line">|       在 Koishi 写业务插件       |</span><br><span class="line">+--------------------------------+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>之后会围绕此点，一步步说明如何操作。</p>
+<p>在执行操作前请确认服务器内各种工具的存在状态，可跳转其它博客文章确认本机内的所需依赖。</p>
+<h1 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h1><p>在当前用户目录下，执行下列命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p qqbot/napcat/config</span><br><span class="line"><span class="built_in">mkdir</span> -p qqbot/napcat/data</span><br><span class="line"><span class="built_in">mkdir</span> -p qqbot/koishi</span><br><span class="line"><span class="built_in">cd</span> ~/qqbot</span><br></pre></td></tr></table></figure>
+
+<p>在本地创建一个 <code>docker-compose.yml</code> 来定义这两个服务，直接扔进去或者 <code>nano</code> 一个，yml内容如下：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="comment"># 服务1: NapCat (QQ客户端)</span></span><br><span class="line">  <span class="attr">napcat:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mlikiowa/napcat-docker:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">napcat</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="comment"># 加这两个参数防止卡死</span></span><br><span class="line">    <span class="attr">security_opt:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">seccomp:unconfined</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">WEBUI_TOKEN=（你的密码你的密码你的密码你的密码你的密码你的密码）</span>  <span class="comment"># NapCat管理面板的密码，请自行修改</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">QQ_APP_ARGS=--no-sandbox</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment"># 映射到你要求的目录</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./napcat/data:/app/.config/QQ</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./napcat/config:/app/napcat/config</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;6099:6099&quot;</span> <span class="comment"># NapCat WebUI 端口</span></span><br><span class="line">      <span class="comment"># 3001 端口 Koishi 会通过内部网络连接它，这样更安全</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># 服务2: Koishi (机器人框架)</span></span><br><span class="line">  <span class="attr">koishi:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">koishijs/koishi</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">koishi</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./koishi:/koishi</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;5140:5140&quot;</span> <span class="comment"># Koishi 管理面板端口</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">napcat</span> <span class="comment"># 确保 NapCat 先启动</span></span><br></pre></td></tr></table></figure>
+
+<p>放进去以后，在 <code>~/qqbot</code> 下执行下列操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker compose up -d</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、配置-Koishi"><a href="#二、配置-Koishi" class="headerlink" title="二、配置 Koishi"></a>二、配置 Koishi</h1><p>如果不是 root 用户，就赋权</p>
+<h3 id="1-进入Koishi-web-后台加入-auth"><a href="#1-进入Koishi-web-后台加入-auth" class="headerlink" title="1. 进入Koishi web 后台加入 auth"></a>1. 进入Koishi web 后台加入 auth</h3><p>现在服务器的 Koishi 是裸奔状态，打开浏览器访问 <code>http://（ip地址ip地址ip地址）:5140</code> ，从左边的侧边栏内的<strong>依赖管理</strong>中进入依赖，修改 <code>@koishijs/plugin-auth</code> ，如果<strong>操作</strong>列无法点击，就刷新一下。</p>
+
+
+<p>配置账号密码和各种参数，点击保存和应用，然后再进入主页。</p>
+
+
+<p>这里会多出一个登录，且之前默认开放的左边侧边栏的各种选项都被隐藏，说明设置完毕。</p>
+
+
+<p><em>修复可能遇到的问题</em></p>
+<ul>
+<li><em>前端可能会报错，是因为 console 这个插件缺少子依赖，将其更新后应用就行</em></li>
+</ul>
+<h3 id="2-提高安全等级"><a href="#2-提高安全等级" class="headerlink" title="2. 提高安全等级"></a>2. 提高安全等级</h3><p>现在虽然可以把重要的设置隔绝，但是以游客视角能做的事情依旧很多，且能看到服务器信息，所以需要利用别的方式将其隔离。如果对安全级别要求很高，可直接跳转至下一篇 blog 查看。</p>
+<h1 id="三、登录-NapCat"><a href="#三、登录-NapCat" class="headerlink" title="三、登录 NapCat"></a>三、登录 NapCat</h1><p>OK 以后，打开浏览器访问 <code>http://（ip地址ip地址ip地址）:6099/webui/</code> ，加载好以后差不多长这样：</p>
+
+
+<p>输入刚刚放到 yml 里的 token，选择<strong>扫码登录</strong>或者<strong>快速登录</strong>都行，如果能在<strong>猫猫日志</strong>里看到 log，那 NapCat 就算初步完毕了。</p>
+
+
+<p><em>可能会被风控，如果被风控就 <code> sudo docker restart napcat</code></em> </p>
+<h1 id="四、集成两者"><a href="#四、集成两者" class="headerlink" title="四、集成两者"></a>四、集成两者</h1><p>集成文档不多赘述，直接看 <a target="_blank" rel="noopener" href="https://napneko.github.io/use/integration">NapCat官方文档</a></p>
+<p>配置完了 Koishi 以后，回到 NapCat ，打开网络配置添加如下</p>
+
+
+
+
+<p>成功后，向机器人发送 <code>help</code> ，有回应就算完成了。</p>
+
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/11/04/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8--2%E8%B0%B7%E6%AD%8C%E8%AE%A4%E8%AF%81/">从零开始搭建服务器--2谷歌认证</a></div></section></div>
+
+
+
+
+
+
 <footer class="page-footer footnote"><hr><div class="text"><p><span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次</span><br><span id="site_runtime"></span></p>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -100,7 +183,14 @@
 </script>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">一、准备工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE-Koishi"><span class="toc-text">二、配置 Koishi</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%9B%E5%85%A5Koishi-web-%E5%90%8E%E5%8F%B0%E5%8A%A0%E5%85%A5-auth"><span class="toc-text">1. 进入Koishi web 后台加入 auth</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8F%90%E9%AB%98%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7"><span class="toc-text">2. 提高安全等级</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%99%BB%E5%BD%95-NapCat"><span class="toc-text">三、登录 NapCat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%9B%86%E6%88%90%E4%B8%A4%E8%80%85"><span class="toc-text">四、集成两者</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
