@@ -17,33 +17,30 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>QQ机器人--1环境准备 - 这位同学的博er</title>
+  <title>QQ机器人--2RSS订阅 - 这位同学的博er</title>
 
   
-    <meta name="description" content="使用 Napcat + Koishi 的组合，创建一个 QQ 机器人">
+    <meta name="description" content="订阅消息，发送给自己机器人所在的 QQ 群，以及给指定 QQ 提权。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QQ机器人--1环境准备">
-<meta property="og:url" content="http://karaik.github.io/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/index.html">
+<meta property="og:title" content="QQ机器人--2RSS订阅">
+<meta property="og:url" content="http://karaik.github.io/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/index.html">
 <meta property="og:site_name" content="这位同学的博er">
-<meta property="og:description" content="使用 Napcat + Koishi 的组合，创建一个 QQ 机器人">
+<meta property="og:description" content="订阅消息，发送给自己机器人所在的 QQ 群，以及给指定 QQ 提权。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://karaik.github.io/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251120164543579.png">
-<meta property="og:image" content="http://karaik.github.io/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251120165816307.png">
-<meta property="og:image" content="http://karaik.github.io/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251120170431004.png">
-<meta property="og:image" content="http://karaik.github.io/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251120141652010.png">
-<meta property="og:image" content="http://karaik.github.io/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251120143554066.png">
-<meta property="og:image" content="http://karaik.github.io/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251204120546061.png">
-<meta property="og:image" content="http://karaik.github.io/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251204120703528.png">
-<meta property="og:image" content="http://karaik.github.io/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251204121440598.png">
-<meta property="article:published_time" content="2025-12-04T04:14:55.000Z">
-<meta property="article:modified_time" content="2025-12-04T04:14:55.000Z">
+<meta property="og:image" content="http://karaik.github.io/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/image-20251225095911235.png">
+<meta property="og:image" content="http://karaik.github.io/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/image-20251225100041074.png">
+<meta property="og:image" content="http://karaik.github.io/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/image-20251225105122368.png">
+<meta property="og:image" content="http://karaik.github.io/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/image-20251225114725276.png">
+<meta property="og:image" content="http://karaik.github.io/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/image-20251225114908827.png">
+<meta property="article:published_time" content="2025-12-25T03:51:56.000Z">
+<meta property="article:modified_time" content="2025-12-25T03:51:56.000Z">
 <meta property="article:author" content="这位同学（karaik）">
 <meta property="article:tag" content="QQ机器人">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="napcat">
 <meta property="article:tag" content="koishi">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://karaik.github.io/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251120164543579.png">
+<meta name="twitter:image" content="http://karaik.github.io/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/image-20251225095911235.png">
   
   
   
@@ -91,60 +88,69 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/">开发日常</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-12-04T04:14:55.000Z">2025-12-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-12-04T04:14:55.000Z">2025-12-04</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-12-25T03:51:56.000Z">2025-12-25</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-12-25T03:51:56.000Z">2025-12-25</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>QQ机器人--1环境准备</span></h1>
+        <h1 class="text title"><span>QQ机器人--2RSS订阅</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>使用 Napcat + Koishi 的组合创建一个QQ机器人的大致流程如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">+--------------------------------+</span><br><span class="line">|         NTQQ 登录 QQ            |</span><br><span class="line">+--------------------------------+</span><br><span class="line">                ↓</span><br><span class="line">+--------------------------------+</span><br><span class="line">|   Napcat 挂在 QQ 上对外暴露接口  |</span><br><span class="line">+--------------------------------+</span><br><span class="line">               ↓</span><br><span class="line">+--------------------------------+</span><br><span class="line">|          Koishi 启动            |</span><br><span class="line">+--------------------------------+</span><br><span class="line">               ↓</span><br><span class="line">+--------------------------------+</span><br><span class="line">|   Koishi 通过适配器连接 Napcat   |</span><br><span class="line">+--------------------------------+</span><br><span class="line">               ↓</span><br><span class="line">+--------------------------------+</span><br><span class="line">|       在 Koishi 写业务插件       |</span><br><span class="line">+--------------------------------+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  </div><article class="md-text content"><p>身为一个群组机器人，怎么能没有消息推送？所以针对不同的群组肯定要订阅不同的消息，好在 koishi 是有现成的 RSS 订阅消息插件的，可以省下很多功夫。</p>
+<h1 id="一、追加-RSS-订阅插件"><a href="#一、追加-RSS-订阅插件" class="headerlink" title="一、追加 RSS 订阅插件"></a>一、追加 RSS 订阅插件</h1><p>直接搜索 RSS，有一个 <code>rss-owl</code> 的插件，直接下载。 </p>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/image-20251225095911235.png" class="lazy" title="image-20251225095911235">
 
-<p>之后会围绕此点，一步步说明如何操作。</p>
-<p>在执行操作前请确认服务器内各种工具的存在状态，可跳转其它博客文章确认本机内的所需依赖。</p>
-<h1 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h1><p>在当前用户目录下，执行下列命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p qqbot/napcat/config</span><br><span class="line"><span class="built_in">mkdir</span> -p qqbot/napcat/data</span><br><span class="line"><span class="built_in">mkdir</span> -p qqbot/koishi</span><br><span class="line"><span class="built_in">cd</span> ~/qqbot</span><br></pre></td></tr></table></figure>
+<p>追加然后去启动，启动好了以后，会发现它有默认的 RSS 订阅地址，但是用的人很多，基本上用不了，所以需要自己搭建一个。</p>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/image-20251225100041074.png" class="lazy" title="image-20251225100041074">
 
-<p>在本地创建一个 <code>docker-compose.yml</code> 来定义这两个服务，直接扔进去或者 <code>nano</code> 一个，yml内容如下：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="comment"># 服务1: NapCat (QQ客户端)</span></span><br><span class="line">  <span class="attr">napcat:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mlikiowa/napcat-docker:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">napcat</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="comment"># 加这两个参数防止卡死</span></span><br><span class="line">    <span class="attr">security_opt:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">seccomp:unconfined</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">WEBUI_TOKEN=（你的密码你的密码你的密码你的密码你的密码你的密码）</span>  <span class="comment"># NapCat管理面板的密码，请自行修改</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">QQ_APP_ARGS=--no-sandbox</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment"># 映射到你要求的目录</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./napcat/data:/app/.config/QQ</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./napcat/config:/app/napcat/config</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;6099:6099&quot;</span> <span class="comment"># NapCat WebUI 端口</span></span><br><span class="line">      <span class="comment"># 3001 端口 Koishi 会通过内部网络连接它，这样更安全</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># 服务2: Koishi (机器人框架)</span></span><br><span class="line">  <span class="attr">koishi:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">koishijs/koishi</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">koishi</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./koishi:/koishi</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;5140:5140&quot;</span> <span class="comment"># Koishi 管理面板端口</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">napcat</span> <span class="comment"># 确保 NapCat 先启动</span></span><br></pre></td></tr></table></figure>
 
-<p>放进去以后，在 <code>~/qqbot</code> 下执行下列操作：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker compose up -d</span><br></pre></td></tr></table></figure>
 
-<h1 id="二、配置-Koishi"><a href="#二、配置-Koishi" class="headerlink" title="二、配置 Koishi"></a>二、配置 Koishi</h1><p>如果不是 root 用户，就赋权</p>
-<h3 id="1-进入Koishi-web-后台加入-auth"><a href="#1-进入Koishi-web-后台加入-auth" class="headerlink" title="1. 进入Koishi web 后台加入 auth"></a>1. 进入Koishi web 后台加入 auth</h3><p>现在服务器的 Koishi 是裸奔状态，打开浏览器访问 <code>http://（ip地址ip地址ip地址）:5140</code> ，从左边的侧边栏内的<strong>依赖管理</strong>中进入依赖，修改 <code>@koishijs/plugin-auth</code> ，如果<strong>操作</strong>列无法点击，就刷新一下。</p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251120164543579.png" class="lazy" title="image-20251120164543579">
+<h1 id="二、自建-RSSHub"><a href="#二、自建-RSSHub" class="headerlink" title="二、自建 RSSHub"></a>二、自建 RSSHub</h1><p>公共实例不稳定&#x2F;限流是常态，尤其是 B 站相关路由。你要稳定订阅，最靠谱就是自建 RSSHub，并给它配 puppeteer（browserless，无头浏览器）。由于自己在搭建 <code>napcat</code> 和 <code>koishi</code> 的时候本身就使用的 Docker ，所以直接在 <code>docker-compose.yml</code> 里追加两个服务就行：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">....</span></span><br><span class="line">  <span class="comment"># 服务3: RSSHub</span></span><br><span class="line">  <span class="attr">rsshub:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">diygod/rsshub:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">rsshub</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">      <span class="comment"># 让 RSSHub 使用 browserless 提供的 Chrome（bilibili 动态路由经常需要）</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">PUPPETEER_WS_ENDPOINT=ws://browserless:3000</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="comment"># 只绑定到本机，避免对公网暴露（Koishi 走内网 http://rsshub:1200 访问）</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;127.0.0.1:1200:1200&quot;</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">browserless</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># 服务4: browserless</span></span><br><span class="line">  <span class="attr">browserless:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">browserless/chrome:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">browserless</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br></pre></td></tr></table></figure>
 
-<p>配置账号密码和各种参数，点击保存和应用，然后再进入主页。</p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251120165816307.png" class="lazy" title="image-20251120165816307">
+<p>然后重启容器，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose up -d</span><br></pre></td></tr></table></figure>
 
-<p>这里会多出一个登录，且之前默认开放的左边侧边栏的各种选项都被隐藏，说明设置完毕。</p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251120170431004.png" class="lazy" title="image-20251120170431004">
+<p>成功后直接在本地确认是否可用，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -I <span class="string">&quot;http://127.0.0.1:1200/healthz&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p><em>修复可能遇到的问题</em></p>
-<ul>
-<li><em>前端可能会报错，是因为 console 这个插件缺少子依赖，将其更新后应用就行</em></li>
-</ul>
-<h1 id="三、登录-NapCat"><a href="#三、登录-NapCat" class="headerlink" title="三、登录 NapCat"></a>三、登录 NapCat</h1><p>OK 以后，打开浏览器访问 <code>http://（ip地址ip地址ip地址）:6099/webui/</code> ，加载好以后差不多长这样：</p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251120141652010.png" class="lazy" title="image-20251120141652010">
+<p>切换到 koishi 容器里，确认是否能内网访问，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it koishi sh</span><br><span class="line"></span><br><span class="line">curl -I <span class="string">&quot;http://rsshub:1200/healthz&quot;</span></span><br><span class="line">curl -L -I <span class="string">&quot;http://rsshub:1200/bilibili/user/dynamic/598504181&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>输入刚刚放到 yml 里的 token，选择<strong>扫码登录</strong>或者<strong>快速登录</strong>都行，如果能在<strong>猫猫日志</strong>里看到 log，那 NapCat 就算初步完毕了。</p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251120143554066.png" class="lazy" title="image-20251120143554066">
+<p>在对应的 QQ 群里追加订阅，（需要注意的是，私聊是没有用的，必须在群里测试）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rss http://rsshub:1200/bilibili/user/dynamic/598504181 -t 鹰角网络B站动态 -i content</span><br></pre></td></tr></table></figure>
 
-<p><em>可能会被风控，如果被风控就 <code> sudo docker restart napcat</code></em> </p>
-<h1 id="四、集成两者"><a href="#四、集成两者" class="headerlink" title="四、集成两者"></a>四、集成两者</h1><p>集成文档不多赘述，直接看 <a target="_blank" rel="noopener" href="https://napneko.github.io/use/integration">NapCat官方文档</a></p>
-<p>配置完了 Koishi 以后，回到 NapCat ，打开网络配置添加如下</p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251204120546061.png" class="lazy" title="image-20251204120546061">
+<p>测试一下，能正常出结果，就成功了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rss -l</span><br></pre></td></tr></table></figure>
 
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251204120703528.png" class="lazy" title="image-20251204120703528">
+<p>关于插件设置中的仓库，请参考 <a target="_blank" rel="noopener" href="https://github.com/borraken/koishi-plugin-rss-owl">koishi-plugin-rss-owl</a></p>
+<h1 id="三、容易遇到的问题"><a href="#三、容易遇到的问题" class="headerlink" title="三、容易遇到的问题"></a>三、容易遇到的问题</h1><p>如果你的机器人加了多个群，且多个群有相同的推送，经常会出现无法推送的情况，错误形如以下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2025-12-25 09:47:08</span> [<span class="string">W</span>] <span class="attr">bot Error:</span> <span class="string">Timeout</span> <span class="string">with</span> <span class="string">request</span> <span class="string">send_group_forward_msg,</span> <span class="attr">args:</span> &#123;<span class="string">&quot;group_id&quot;</span><span class="string">:XXXXXXXXX</span>,<span class="string">&quot;messages&quot;</span><span class="string">:</span>[&#123;<span class="string">&quot;type&quot;</span><span class="string">:&quot;node&quot;</span>,<span class="string">&quot;data&quot;</span><span class="string">:</span>&#123;<span class="string">&quot;name&quot;</span><span class="string">:&quot;XXXXXXX&quot;</span>,<span class="string">&quot;uin&quot;</span><span class="string">:&quot;XXXXXX&quot;</span>,<span class="string">&quot;content&quot;</span><span class="string">:</span>[&#123;<span class="string">&quot;type&quot;</span><span class="string">:&quot;text&quot;</span>,<span class="string">&quot;data&quot;</span><span class="string">:</span>&#123;<span class="string">&quot;text&quot;</span><span class="string">:&quot;《「星语共愿」特别纪念PV》\n「星语共愿」特别纪念PV承载无数心意的今天，繁星与我们一</span> </span><br><span class="line"></span><br><span class="line"><span class="string">...</span></span><br><span class="line"></span><br><span class="line">	<span class="string">at</span> <span class="string">Timeout._onTimeout</span> <span class="string">(/koishi/node_modules/koishi-plugin-adapter-onebot/lib/index.js:676:16)</span></span><br><span class="line">	<span class="string">at</span> <span class="string">listOnTimeout</span> <span class="string">(node:internal/timers:581:17)</span></span><br><span class="line">	<span class="string">at</span> <span class="string">process.processTimers</span> <span class="string">(node:internal/timers:519:7)</span></span><br></pre></td></tr></table></figure>
 
-<p>成功后，向机器人发送 <code>help</code> ，有回应就算完成了。</p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/image-20251204121440598.png" class="lazy" title="image-20251204121440598">
+<p>先创建默认的 cache 目录存放缓存图片，否则后续操作会报错，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it koishi sh -lc <span class="string">&#x27;mkdir -p /koishi/data/cache/rssOwl &amp;&amp; ls -al /koishi/data/cache&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>修改容器文件配置，让 napcat 也能共享缓存</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">napcat:</span></span><br><span class="line">  <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./napcat/data:/app/.config/QQ</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./napcat/config:/app/napcat/config</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./koishi/data/cache/rssOwl:/koishi/data/cache/rssOwl:ro</span></span><br></pre></td></tr></table></figure>
+
+<p>这三个位置改成所展示的这样，</p>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/image-20251225105122368.png" class="lazy" title="image-20251225105122368">
+
+<p>再重启容器,</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose up -d</span><br></pre></td></tr></table></figure>
+
+<p>就能杜绝绝大部分问题，BASE64 的图片消息会导致 log 过长，本身也不适合 Debug ，还是改过来比较好。</p>
+<h1 id="四、账号提权"><a href="#四、账号提权" class="headerlink" title="四、账号提权"></a>四、账号提权</h1><p>对于 RSS 命令，默认只能在群里执行，如果没配权限的话，那就会变成所有人都能随意添加订阅链接，故需要指定高权限账号，不过不推荐给自己过高的权限，一切危险操作都只在 Web 后台里执行最佳，给自己一个 2 的权限就行。</p>
+<p>首先找到数据库，然后找到 binding ，pid 是自己的 QQ 账号，找到自己那条，然后看 aid，比如我这里是 1。</p>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/image-20251225114725276.png" class="lazy" title="image-20251225114725276">
+
+<p>找到以后，去看 user 表，找到 id 为 1 的账号，然后手动把 authority 改为你想要的权限，我这里直接设置为了 2，记得点击应用操作。</p>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/image-20251225114908827.png" class="lazy" title="image-20251225114908827">
+
+<p>插件和写 SQL 都太麻烦，这样反而容易点。</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -154,7 +160,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2025/12/25/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--2RSS%E8%AE%A2%E9%98%85/">QQ机器人--2RSS订阅</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/11/04/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8--2%E8%B0%B7%E6%AD%8C%E8%AE%A4%E8%AF%81/">从零开始搭建服务器--2谷歌认证</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/12/04/QQ%E6%9C%BA%E5%99%A8%E4%BA%BA--1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/">QQ机器人--1环境准备</a></div></section></div>
 
 
 
@@ -195,7 +201,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">一、准备工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE-Koishi"><span class="toc-text">二、配置 Koishi</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%9B%E5%85%A5Koishi-web-%E5%90%8E%E5%8F%B0%E5%8A%A0%E5%85%A5-auth"><span class="toc-text">1. 进入Koishi web 后台加入 auth</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%99%BB%E5%BD%95-NapCat"><span class="toc-text">三、登录 NapCat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%9B%86%E6%88%90%E4%B8%A4%E8%80%85"><span class="toc-text">四、集成两者</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%BF%BD%E5%8A%A0-RSS-%E8%AE%A2%E9%98%85%E6%8F%92%E4%BB%B6"><span class="toc-text">一、追加 RSS 订阅插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%87%AA%E5%BB%BA-RSSHub"><span class="toc-text">二、自建 RSSHub</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%B9%E6%98%93%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">三、容易遇到的问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%B4%A6%E5%8F%B7%E6%8F%90%E6%9D%83"><span class="toc-text">四、账号提权</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
