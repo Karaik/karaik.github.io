@@ -103,8 +103,7 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><p>身为一个群组机器人，怎么能没有消息推送？所以针对不同的群组肯定要订阅不同的消息，好在 koishi 是有现成的 RSS 订阅消息插件的，可以省下很多功夫。</p>
-<p>AWS 为了吸引用户注册自己的 Kiro 平台，用自己企业内部署的 ClaudeCode 来当福利，可以使用满血的 Opus，给每个新注册用户都分配了 500 积分，每个月还有 50 的免费额度，换算下来 2 积分相当于 1 美元，那不狠狠撸一下？</p>
+  </div><article class="md-text content"><p>AWS 为了吸引用户注册自己的 Kiro 平台，用自己企业内部署的 ClaudeCode 来当福利，可以使用满血的 Opus，给每个新注册用户都分配了 500 积分，每个月还有 50 的免费额度，换算下来 2 积分相当于 1 美元，那不狠狠撸一下？</p>
 <h1 id="一、部署反代服务"><a href="#一、部署反代服务" class="headerlink" title="一、部署反代服务"></a>一、部署反代服务</h1><p>当然，首先得有自己的服务器，直接按照官方教程部署 <a target="_blank" rel="noopener" href="https://github.com/justlovemaki/AIClient-2-API">AIClient-2-API</a> 。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 3000:3000 -p 8085-8087:8085-8087 -p 19876-19880:19876-19880 --restart=always -v <span class="string">&quot;指定路径:/app/configs&quot;</span> --name aiclient2api justlikemaki/aiclient-2-api</span><br></pre></td></tr></table></figure>
 
